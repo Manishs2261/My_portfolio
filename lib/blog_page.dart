@@ -94,7 +94,7 @@ class BlogService {
 class BlogPage extends StatefulWidget {
   final String mediumUsername;
 
-  const BlogPage({Key? key, required this.mediumUsername}) : super(key: key);
+  const BlogPage({super.key, required this.mediumUsername});
 
   @override
   _BlogPageState createState() => _BlogPageState();
@@ -223,7 +223,7 @@ class BlogCard extends StatefulWidget {
   final BlogPost post;
   final VoidCallback onTap;
 
-  const BlogCard({Key? key, required this.post, required this.onTap}) : super(key: key);
+  const BlogCard({super.key, required this.post, required this.onTap});
 
   @override
   _BlogCardState createState() => _BlogCardState();
@@ -255,7 +255,6 @@ class _BlogCardState extends State<BlogCard> with SingleTickerProviderStateMixin
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final width = size.width;
-    final height = size.height;
     return GestureDetector(
       onTapDown: (_) => _animationController.forward(),
       onTapUp: (_) {
@@ -275,13 +274,13 @@ class _BlogCardState extends State<BlogCard> with SingleTickerProviderStateMixin
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    Colors.purple.withOpacity(0.8),
-                    Colors.blue.withOpacity(0.6),
+                    Colors.purple.withValues(alpha: 0.8),
+                    Colors.blue.withValues(alpha: 0.6),
                   ],
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
+                    color: Colors.black.withValues(alpha: 0.3),
                     blurRadius: 10,
                     offset: const Offset(0, 5),
                   ),
@@ -340,7 +339,7 @@ class _BlogCardState extends State<BlogCard> with SingleTickerProviderStateMixin
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                 decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.2),
+                                  color: Colors.white.withValues( alpha: 0.2),
                                   borderRadius: BorderRadius.circular(8),
                                 ),
                                 child: AutoSizeText(
@@ -349,7 +348,7 @@ class _BlogCardState extends State<BlogCard> with SingleTickerProviderStateMixin
                                   maxFontSize: 18,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
-                                    color: Colors.white.withOpacity(0.9),
+                                    color: Colors.white.withValues( alpha: 0.9),
 
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -362,7 +361,7 @@ class _BlogCardState extends State<BlogCard> with SingleTickerProviderStateMixin
                                   maxFontSize : 18,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
-                                  color: Colors.white.withOpacity(0.7),
+                                  color: Colors.white.withValues( alpha: 0.7),
                                   fontSize: 12,
                                 ),
                               ),
@@ -396,7 +395,7 @@ class _BlogCardState extends State<BlogCard> with SingleTickerProviderStateMixin
                             maxFontSize: 18,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                              color: Colors.white.withOpacity(0.8),
+                              color: Colors.white.withValues( alpha: 0.8),
 
                               height: 1.4,
                             ),

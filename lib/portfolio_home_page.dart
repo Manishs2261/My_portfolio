@@ -1,15 +1,20 @@
+// ignore_for_file: depend_on_referenced_packages, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/academicons.dart';
 import 'package:iconify_flutter/icons/bi.dart';
 import 'package:iconify_flutter/icons/mdi.dart';
 import 'package:iconify_flutter/icons/ri.dart';
-import 'package:portfolio/BlogPage.dart';
-import 'package:portfolio/PortfolioPage.dart';
-import 'package:portfolio/ResumeTab.dart';
+import 'package:portfolio/blog_page.dart';
+import 'package:portfolio/portfolio_page.dart';
+import 'package:portfolio/resume_tab.dart';
 
 
 class PortfolioHomePage extends StatefulWidget {
+  const PortfolioHomePage({super.key});
+
   @override
   _PortfolioHomePageState createState() => _PortfolioHomePageState();
 }
@@ -68,7 +73,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                             decoration: BoxDecoration(
                               color:
                               isSelected
-                                  ? Colors.amber.withOpacity(0.1)
+                                  ? Colors.amber.withValues( alpha: 0.1)
                                   : Colors.transparent,
                               borderRadius: BorderRadius.circular(8),
                             ),
@@ -229,7 +234,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: color.withOpacity(0.2),
+              color: color.withValues( alpha: 0.2),
               borderRadius: BorderRadius.circular(8),
             ),
             child:

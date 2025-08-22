@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class ResumeTab extends StatelessWidget {
+  const ResumeTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -149,7 +151,7 @@ class ResumeTab extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Colors.amber.withOpacity(0.1),
+                color: Colors.amber.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Icon(icon, color: Colors.amber, size: 24),
@@ -340,7 +342,7 @@ class ResumeTab extends StatelessWidget {
                       SizedBox(height: 16),
                     ],
                   );
-                }).toList(),
+                }),
               ],
             ),
           ),

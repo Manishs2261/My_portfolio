@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/PortfolioHomePage.dart';
+import 'package:portfolio/portfolio_home_page.dart';
+// ignore: unused_import
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
@@ -7,6 +8,8 @@ void main() {
 }
 
 class PortfolioApp extends StatelessWidget {
+  const PortfolioApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
